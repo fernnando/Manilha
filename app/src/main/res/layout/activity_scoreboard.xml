@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Time A"
+                android:text="@string/team_a"
                 android:textSize="24sp" />
 
             <TextView
@@ -44,11 +44,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingBottom="24dp"
-                android:text="0"
+                android:text="@string/tv_zero"
                 android:textColor="@android:color/black"
                 android:textSize="56sp" />
 
             <Button
+                android:theme="@style/CounterButton"
                 android:id="@+id/addThreeTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,10 +57,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamAPoints"
-                android:text="Truco!"
-                android:textColor="@android:color/white" />
+                android:text="@string/btn_truco" />
 
             <Button
+                android:theme="@style/CounterButton"
                 android:id="@+id/addSixTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,10 +68,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamAPoints"
-                android:text="Seis!"
-                android:textColor="@android:color/white" />
+                android:text="@string/btn_six" />
 
             <Button
+                android:theme="@style/CounterButton"
                 android:id="@+id/addNineTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,10 +79,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamAPoints"
-                android:text="Nove!"
-                android:textColor="@android:color/white" />
+                android:text="@string/btn_nine" />
 
             <Button
+                android:theme="@style/CounterButton"
                 android:id="@+id/addTwelveTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,8 +90,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamAPoints"
-                android:text="Doze!"
-                android:textColor="@android:color/white" />
+                android:text="@string/btn_twelve" />
 
 
         </LinearLayout>
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Time B"
+                android:text="@string/team_b"
                 android:textSize="24sp" />
 
             <TextView
@@ -121,11 +121,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingBottom="24dp"
-                android:text="0"
+                android:text="@string/tv_zero"
                 android:textColor="#000000"
                 android:textSize="56sp" />
 
             <Button
+                android:theme="@style/CounterButton"
                 android:id="@+id/addThreeTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,10 +134,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamBPoints"
-                android:text="Truco!"
-                android:textColor="@android:color/white" />
+                android:text="@string/btn_truco" />
 
             <Button
+                android:theme="@style/CounterButton"
                 android:id="@+id/addSixTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -144,10 +145,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamBPoints"
-                android:text="Seis!"
-                android:textColor="@android:color/white" />
+                android:text="@string/btn_six" />
 
             <Button
+                android:theme="@style/CounterButton"
                 android:id="@+id/addNineTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -155,10 +156,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamBPoints"
-                android:text="Nove!"
-                android:textColor="@android:color/white" />
+                android:text="@string/btn_nine" />
 
             <Button
+                android:theme="@style/CounterButton"
                 android:id="@+id/addTwelveTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -166,8 +167,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamBPoints"
-                android:text="Doze!"
-                android:textColor="@android:color/white" />
+                android:text="@string/btn_twelve" />
         </LinearLayout>
     </LinearLayout>
 
@@ -177,9 +177,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
         android:onClick="resetScore"
-        android:text="Resetar"
+        android:text="@string/btn_reset"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/white" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
