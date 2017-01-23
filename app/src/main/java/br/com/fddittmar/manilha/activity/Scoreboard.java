@@ -1,17 +1,21 @@
 package br.com.fddittmar.manilha.activity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import br.com.fddittmar.manilha.R;
 
 public class Scoreboard extends AppCompatActivity {
-    public int scoreTeamA = 0;
-    public int scoreTeamB = 0;
-    public TextView teamA_score;
-    public TextView teamB_score;
+    private int scoreTeamA = 0;
+    private int scoreTeamB = 0;
+    private TextView teamA_score;
+    private TextView teamB_score;
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +48,12 @@ public class Scoreboard extends AppCompatActivity {
     public void updateCounterTeamA(int add){
         scoreTeamA += add;
 
-        if(scoreTeamA > 12)
+        if(scoreTeamA >= 12){
             scoreTeamA = 12;
+            teamA_score.setText(Integer.toString(scoreTeamA));
+            winnerAlert("Time A venceu!");
+            return;
+        }
 
         teamA_score.setText(Integer.toString(scoreTeamA));
     }
@@ -74,15 +82,42 @@ public class Scoreboard extends AppCompatActivity {
     public void updateCounterTeamB(int add){
         scoreTeamB += add;
 
-        if(scoreTeamB > 12)
+        if(scoreTeamB >= 12){
             scoreTeamB = 12;
+            teamB_score.setText(Integer.toString(scoreTeamB));
+            winnerAlert("Time B venceu!");
+            return;
+        }
+
 
         teamB_score.setText(Integer.toString(scoreTeamB));
     }
 
     public void resetScore(View view) {
+        resetGame();
+    }
+
+    public void resetGame(){
         scoreTeamA = scoreTeamB = 0;
         teamA_score.setText(Integer.toString(scoreTeamA));
         teamB_score.setText(Integer.toString(scoreTeamB));
     }
+
+
+    public void winnerAlert(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Acabou a partida");
+        builder.setMessage(message);
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                Toast.makeText(getBaseContext(), "Partida reiniciada.", Toast.LENGTH_SHORT).show();
+                resetGame();
+            }
+        });
+
+        alerta = builder.create();
+        alerta.show();
+    }
+
 }
