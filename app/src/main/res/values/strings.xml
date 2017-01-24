@@ -5,10 +5,11 @@
     <string name="rules">Regras do Truco</string>
     <string name="btn_twelve">Doze!</string>
     <string name="btn_nine">Nove!</string>
-    <string name="btn_reset">Resetar</string>
+    <string name="btn_reset">Reiniciar Partida</string>
     <string name="btn_six">Seis!</string>
     <string name="btn_truco">Truco!</string>
     <string name="team_b">Time B</string>
     <string name="tv_zero">0</string>
     <string name="team_a">Time A</string>
+    <string name="resetGame">Reiniciar jogo</string>
 </resources>

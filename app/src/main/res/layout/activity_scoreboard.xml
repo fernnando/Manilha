@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="16dp"
+                android:padding="8dp"
                 android:text="@string/team_a"
                 android:textSize="24sp" />
 
@@ -53,7 +53,7 @@
                 android:id="@+id/addThreeTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamAPoints"
@@ -64,7 +64,7 @@
                 android:id="@+id/addSixTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamAPoints"
@@ -75,7 +75,7 @@
                 android:id="@+id/addNineTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamAPoints"
@@ -86,7 +86,7 @@
                 android:id="@+id/addTwelveTeamA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamAPoints"
@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="16dp"
+                android:padding="8dp"
                 android:text="@string/team_b"
                 android:textSize="24sp" />
 
@@ -130,7 +130,7 @@
                 android:id="@+id/addThreeTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamBPoints"
@@ -141,7 +141,7 @@
                 android:id="@+id/addSixTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamBPoints"
@@ -152,7 +152,7 @@
                 android:id="@+id/addNineTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamBPoints"
@@ -163,7 +163,7 @@
                 android:id="@+id/addTwelveTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:onClick="addTeamBPoints"
@@ -171,14 +171,77 @@
         </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:theme="@style/ResetButton"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
-        android:onClick="resetScore"
-        android:text="@string/btn_reset"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team_a"
+                android:textSize="16sp"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_team_a_games_won"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_zero"
+                android:textSize="16sp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textSize="16sp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_team_b_games_won"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_zero"
+                android:textSize="16sp"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team_b"
+                android:textSize="16sp"/>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:theme="@style/ResetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="resetScore"
+            android:text="@string/btn_reset"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:theme="@style/ResetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:onClick="resetAll"
+            android:text="@string/resetGame" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>

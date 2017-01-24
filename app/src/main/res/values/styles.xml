@@ -18,12 +18,13 @@
 
     <style name="CounterButton" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorButtonNormal">@color/colorPrimary</item>
-        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="ResetButton" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccentDark</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
 
