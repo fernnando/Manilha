@@ -20,9 +20,40 @@
 
 
     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <Button
+                android:theme="@style/ResetButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:onClick="resetScore"
+                android:text="@string/btn_reset"/>
+
+            <Button
+                android:theme="@style/ResetButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:onClick="resetAll"
+                android:text="@string/resetGame" />
+        </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -30,20 +61,64 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="8dp"
-                android:text="@string/team_a"
-                android:textSize="24sp" />
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_team_a_games_won"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="(0)"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_team_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/team_a"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_second_player_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Second Player -"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_team_a"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Third Player"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_team_a"
+                    android:layout_toRightOf="@+id/tv_second_player_a"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Player -"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_team_a"
+                    android:layout_toLeftOf="@+id/tv_second_player_a"/>
+
+            </RelativeLayout>
+
 
             <TextView
                 android:id="@+id/team_a_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="24dp"
+                android:paddingBottom="14dp"
                 android:text="@string/tv_zero"
                 android:textColor="@android:color/black"
                 android:textSize="56sp" />
@@ -123,22 +198,66 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="8dp"
-                android:text="@string/team_b"
-                android:textSize="24sp" />
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_team_b_games_won"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="(0)"
+                    android:textSize="24sp"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:id="@+id/tv_team_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/team_b"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_second_player_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Second Player -"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_team_b"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Third Player"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_team_b"
+                    android:layout_toRightOf="@+id/tv_second_player_b"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Player -"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_team_b"
+                    android:layout_toLeftOf="@+id/tv_second_player_b"/>
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/team_b_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="24dp"
+                android:paddingBottom="14dp"
                 android:text="@string/tv_zero"
-                android:textColor="#000000"
+                android:textColor="@android:color/black"
                 android:textSize="56sp" />
 
 
@@ -204,85 +323,6 @@
 
 
         </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentBottom="true">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/team_a"
-                android:textSize="25sp"
-                android:layout_marginRight="8dp"/>
-
-            <TextView
-                android:id="@+id/tv_team_a_games_won"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_zero"
-                android:textSize="25sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="X"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:id="@+id/tv_team_b_games_won"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_zero"
-                android:textSize="25sp"
-                android:layout_marginRight="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/team_b"
-                android:textSize="25sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp">
-
-            <Button
-                android:theme="@style/ResetButton"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:onClick="resetScore"
-                android:text="@string/btn_reset"/>
-
-            <Button
-                android:theme="@style/ResetButton"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:onClick="resetAll"
-                android:text="@string/resetGame" />
-        </LinearLayout>
-
-
     </LinearLayout>
 
 
