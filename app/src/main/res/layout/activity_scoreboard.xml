@@ -30,13 +30,59 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="8dp"
-                android:text="@string/team_a"
-                android:textSize="24sp" />
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_team_a_games_won"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="(0)"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_team_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/team_a"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_first_player_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="First Player"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/tv_team_a"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/tv_second_player_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Second Player"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_first_player_a"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/tv_third_player_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Third Player"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_second_player_a"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -107,13 +153,61 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="8dp"
-                android:text="@string/team_b"
-                android:textSize="24sp" />
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_team_b_games_won"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="(0)"
+                    android:textSize="24sp"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignParentEnd="true"/>
+
+
+                <TextView
+                    android:id="@+id/tv_team_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/team_b"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_first_player_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="First Player"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/tv_team_b"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/tv_second_player_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Second Player"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_first_player_b"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/tv_third_player_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Third Player"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/tv_second_player_b"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/team_b_score"
@@ -178,52 +272,6 @@
         android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/team_a"
-                android:textSize="16sp"
-                android:layout_marginRight="8dp"/>
-
-            <TextView
-                android:id="@+id/tv_team_a_games_won"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_zero"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="X"
-                android:textSize="16sp"
-                android:layout_marginRight="5dp"/>
-
-            <TextView
-                android:id="@+id/tv_team_b_games_won"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_zero"
-                android:textSize="16sp"
-                android:layout_marginRight="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/team_b"
-                android:textSize="16sp"/>
-
-
-
-        </LinearLayout>
 
         <Button
             android:theme="@style/ResetButton"

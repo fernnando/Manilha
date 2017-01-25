@@ -60,7 +60,7 @@ public class Scoreboard extends AppCompatActivity {
             winnerAlert("Time A venceu!");
 
             winsTeamA++;
-            teamA_all_score.setText(Integer.toString(winsTeamA));
+            teamA_all_score.setText("(" + Integer.toString(winsTeamA) + ")");
             return;
         }
 
@@ -97,7 +97,7 @@ public class Scoreboard extends AppCompatActivity {
             teamB_score.setText(Integer.toString(scoreTeamB));
             winnerAlert("Time B venceu!");
             winsTeamB++;
-            teamB_all_score.setText(Integer.toString(winsTeamB));
+            teamB_all_score.setText("(" + Integer.toString(winsTeamB) + ")");
             return;
         }
 
