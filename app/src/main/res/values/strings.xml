@@ -12,4 +12,6 @@
     <string name="tv_zero">0</string>
     <string name="team_a">Time A</string>
     <string name="resetGame">Reiniciar jogo</string>
+    <string name="player_1">Jogador 1:</string>
+    <string name="player_2">Jogador 2:</string>
 </resources>

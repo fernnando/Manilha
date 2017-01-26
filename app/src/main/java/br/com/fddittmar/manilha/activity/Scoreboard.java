@@ -25,6 +25,7 @@ public class Scoreboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scoreboard);
+        onRestoreInstanceState(savedInstanceState);
         teamA_score = (TextView) findViewById(R.id.team_a_score);
         teamA_all_score = (TextView) findViewById(R.id.tv_team_a_games_won);
         teamB_score = (TextView) findViewById(R.id.team_b_score);
@@ -136,10 +137,10 @@ public class Scoreboard extends AppCompatActivity {
         resetGame();
 
         winsTeamA = 0;
-        teamA_all_score.setText(R.string.tv_zero);
+        teamA_all_score.setText("(0)");
 
         winsTeamB = 0;
-        teamB_all_score.setText(R.string.tv_zero);
+        teamB_all_score.setText("(0)");
 
     }
 }
