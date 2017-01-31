@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startTutorial(View view) {
-        //Intent intent = new Intent(this, Tutorial.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, Tutorial.class);
+        startActivity(intent);
     }
 }

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_four_players"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="br.com.fddittmar.manilha.activity.FourPlayers">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team_a"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="34sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <EditText
+                    android:id="@+id/et_player_1_team_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLength="12"
+                    android:hint="(Opcional)"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:layout_toRightOf="@+id/tv_first_player_a"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_first_player_a"
+                    android:text="@string/player_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignBaseline="@+id/et_player_1_team_a"
+                    android:layout_alignBottom="@+id/et_player_1_team_a"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_player_2_team_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLength="12"
+                    android:hint="(Opcional)"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:layout_toRightOf="@+id/tv_second_player_a"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_second_player_a"
+                    android:text="@string/player_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignBaseline="@+id/et_player_2_team_a"
+                    android:layout_alignBottom="@+id/et_player_2_team_a"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_player_3_team_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLength="12"
+                    android:hint="(Opcional)"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:layout_toRightOf="@+id/tv_third_player_a"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_third_player_a"
+                    android:text="@string/player_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignBaseline="@+id/et_player_3_team_a"
+                    android:layout_alignBottom="@+id/et_player_3_team_a"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team_b"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="34sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <EditText
+                    android:id="@+id/et_player_1_team_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLength="12"
+                    android:hint="(Opcional)"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:layout_toRightOf="@+id/tv_first_player_b"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_first_player_b"
+                    android:text="@string/player_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignBaseline="@+id/et_player_1_team_b"
+                    android:layout_alignBottom="@+id/et_player_1_team_b"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_player_2_team_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLength="12"
+                    android:hint="(Opcional)"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:layout_toRightOf="@+id/tv_second_player_b"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_second_player_b"
+                    android:text="@string/player_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignBaseline="@+id/et_player_2_team_b"
+                    android:layout_alignBottom="@+id/et_player_2_team_b"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_player_3_team_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLength="12"
+                    android:hint="(Opcional)"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:layout_toRightOf="@+id/tv_third_player_b"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_third_player_b"
+                    android:text="@string/player_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignBaseline="@+id/et_player_3_team_b"
+                    android:layout_alignBottom="@+id/et_player_3_team_b"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:theme="@style/CounterButton"
+            android:id="@+id/btn_start"
+            android:text="Iniciar!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:onClick="startCounter"/>
+    </LinearLayout>
+
+
+</LinearLayout>
