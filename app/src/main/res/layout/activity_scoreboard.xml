@@ -40,10 +40,11 @@
                     android:id="@+id/tv_team_a_games_won"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:text="(0)"
+                    android:gravity="start"
+                    android:text="@string/_0"
                     android:textSize="24sp"
-                    android:layout_marginLeft="8dp"/>
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"/>
 
                 <TextView
                     android:id="@+id/tv_team_a"
@@ -94,6 +95,17 @@
                 android:text="@string/tv_zero"
                 android:textColor="@android:color/black"
                 android:textSize="56sp" />
+
+            <Button
+                android:theme="@style/CounterButton"
+                android:id="@+id/addOneTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addTeamAPoints"
+                android:text="@string/btn_one_point" />
 
             <Button
                 android:theme="@style/CounterButton"
@@ -164,9 +176,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="(0)"
+                    android:text="@string/_0"
                     android:textSize="24sp"
                     android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"/>
 
@@ -223,6 +236,17 @@
 
             <Button
                 android:theme="@style/CounterButton"
+                android:id="@+id/addOneTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addTeamBPoints"
+                android:text="@string/btn_one_point" />
+
+            <Button
+                android:theme="@style/CounterButton"
                 android:id="@+id/addThreeTeamB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -268,26 +292,27 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
         <Button
             android:theme="@style/ResetButton"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:onClick="resetScore"
-            android:text="@string/btn_reset"
-            android:layout_marginTop="10dp"/>
+            android:text="@string/btn_reset"/>
 
         <Button
             android:theme="@style/ResetButton"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
             android:onClick="resetAll"
             android:text="@string/resetGame" />
 

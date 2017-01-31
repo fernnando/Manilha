@@ -11,6 +11,7 @@ import android.widget.Toast;
 import br.com.fddittmar.manilha.R;
 
 public class Scoreboard extends AppCompatActivity {
+
     private int scoreTeamA = 0;
     private int scoreTeamB = 0;
     private int winsTeamA = 0;
@@ -97,11 +98,32 @@ public class Scoreboard extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putString("GERAL_TEAM_A_SCORE", teamA_all_score.getText().toString());
+        outState.putString("GERAL_TEAM_B_SCORE", teamB_all_score.getText().toString());
+        outState.putString("TEAM_A_SCORE", teamA_score.getText().toString());
+        outState.putString("TEAM_B_SCORE", teamB_score.getText().toString());
+
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        teamA_all_score.setText(savedInstanceState.getString("GERAL_TEAM_A_SCORE"));
+        teamB_all_score.setText(savedInstanceState.getString("GERAL_TEAM_B_SCORE"));
+        teamA_score.setText(savedInstanceState.getString("TEAM_A_SCORE"));
+        teamB_score.setText(savedInstanceState.getString("TEAM_B_SCORE"));
+    }
+
     public void addTeamAPoints(View view) {
         int identifier = view.getId();
 
         switch (identifier){
 
+            case R.id.addOneTeamA:
+                updateCounterTeamA(1);
+                break;
             case R.id.addThreeTeamA:
                 updateCounterTeamA(3);
                 break;
@@ -140,6 +162,9 @@ public class Scoreboard extends AppCompatActivity {
 
         switch (identifier){
 
+            case R.id.addOneTeamB:
+                updateCounterTeamB(1);
+                break;
             case R.id.addThreeTeamB:
                 updateCounterTeamB(3);
                 break;

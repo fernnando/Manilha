@@ -15,4 +15,9 @@
     <string name="player_1">Jogador 1:</string>
     <string name="player_2">Jogador 2:</string>
     <string name="player_3">Jogador 3:</string>
+    <string name="iv_logo_description">Logo de cartas representando o jogo de truco</string>
+    <string name="opcional">(Opcional)</string>
+    <string name="start">Iniciar!</string>
+    <string name="_0">(0)</string>
+    <string name="btn_one_point">Um ponto!</string>
 </resources>
