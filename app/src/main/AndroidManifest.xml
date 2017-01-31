@@ -20,9 +20,11 @@
         <activity
             android:name=".activity.Scoreboard"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".activity.FourPlayers"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.FourPlayers"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.SixPlayers"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

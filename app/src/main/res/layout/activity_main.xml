@@ -40,7 +40,7 @@
             android:layout_marginRight="16dp"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@android:color/white"
-            android:onClick="startGame"/>
+            android:onClick="startGameFourPlayers"/>
 
         <Button
             android:id="@+id/btn_six_players"
@@ -51,7 +51,8 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:onClick="startGameSixPlayers"/>
 
         <Button
             android:id="@+id/btn_regras"
@@ -62,7 +63,8 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/colorPrimary"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:onClick="startTutorial"/>
 
     </LinearLayout>
 
