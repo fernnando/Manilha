@@ -83,34 +83,38 @@
                     android:text="@string/team_a"
                     android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/tv_first_player_a"
+                <LinearLayout
+                    android:id="@+id/tv_list_playersA"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="First Player -"
-                    android:textSize="12sp"
-                    android:layout_below="@+id/tv_team_a"
-                    android:layout_toLeftOf="@+id/tv_second_player_a"/>
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_team_a">
 
-                <TextView
-                    android:id="@+id/tv_second_player_a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Second Player -"
-                    android:textSize="12sp"
-                    android:layout_below="@+id/tv_team_a"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:id="@+id/tv_first_player_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="First Player"
+                        android:layout_marginRight="8dp"
+                        android:textSize="12sp"/>
 
-                <TextView
-                    android:id="@+id/tv_third_player_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Third Player"
-                    android:textSize="12sp"
-                    android:layout_below="@+id/tv_team_a"
-                    android:layout_toRightOf="@+id/tv_second_player_a"/>
+                    <TextView
+                        android:id="@+id/tv_second_player_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Second Player"
+                        android:layout_marginRight="8dp"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_third_player_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Third Player"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
 
             </RelativeLayout>
 
@@ -213,7 +217,8 @@
                     android:text="(0)"
                     android:textSize="24sp"
                     android:layout_marginRight="8dp"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"/>
 
                 <TextView
                     android:id="@+id/tv_team_b"
@@ -223,34 +228,38 @@
                     android:text="@string/team_b"
                     android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/tv_first_player_b"
+                <LinearLayout
+                    android:id="@+id/tv_list_playersB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="First Player -"
-                    android:textSize="12sp"
-                    android:layout_below="@+id/tv_team_b"
-                    android:layout_toLeftOf="@+id/tv_second_player_b"/>
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_team_b">
 
-                <TextView
-                    android:id="@+id/tv_second_player_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Second Player -"
-                    android:textSize="12sp"
-                    android:layout_below="@+id/tv_team_b"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:id="@+id/tv_first_player_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="First Player"
+                        android:layout_marginRight="8dp"
+                        android:textSize="12sp"/>
 
-                <TextView
-                    android:id="@+id/tv_third_player_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="Third Player"
-                    android:textSize="12sp"
-                    android:layout_below="@+id/tv_team_b"
-                    android:layout_toRightOf="@+id/tv_second_player_b"/>
+                    <TextView
+                        android:id="@+id/tv_second_player_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Second Player"
+                        android:layout_marginRight="8dp"
+                        android:textSize="12sp"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_third_player_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Third Player"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
 
             </RelativeLayout>
 

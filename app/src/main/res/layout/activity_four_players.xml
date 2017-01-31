@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:maxLength="15"
+            android:maxLength="12"
             android:hint="(Opcional)"
             android:textColorHint="@android:color/darker_gray"
             android:layout_toRightOf="@+id/tv_first_player_a"
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:maxLength="15"
+            android:maxLength="12"
             android:hint="(Opcional)"
             android:textColorHint="@android:color/darker_gray"
             android:layout_toRightOf="@+id/tv_second_player_a"
@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:maxLength="15"
+            android:maxLength="12"
             android:hint="(Opcional)"
             android:textColorHint="@android:color/darker_gray"
             android:layout_toRightOf="@+id/tv_first_player_b"
@@ -126,7 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:maxLength="15"
+            android:maxLength="12"
             android:hint="(Opcional)"
             android:textColorHint="@android:color/darker_gray"
             android:layout_toRightOf="@+id/tv_second_player_b"
@@ -159,7 +159,8 @@
             android:text="Iniciar!"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"/>
+            android:layout_gravity="bottom"
+            android:onClick="startCounter"/>
     </LinearLayout>
 
 

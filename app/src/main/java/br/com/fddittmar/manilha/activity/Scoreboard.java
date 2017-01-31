@@ -19,17 +19,82 @@ public class Scoreboard extends AppCompatActivity {
     private TextView teamB_score;
     private TextView teamA_all_score;
     private TextView teamB_all_score;
+
+    private TextView tv_first_a;
+    private TextView tv_second_a;
+    private TextView tv_third_a;
+    private TextView tv_first_b;
+    private TextView tv_second_b;
+    private TextView tv_third_b;
+
     private AlertDialog alerta;
+
+    private String player_1_team_a;
+    private String player_2_team_a;
+    private String player_3_team_a;
+    private String player_1_team_b;
+    private String player_2_team_b;
+    private String player_3_team_b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scoreboard);
-        onRestoreInstanceState(savedInstanceState);
+
         teamA_score = (TextView) findViewById(R.id.team_a_score);
         teamA_all_score = (TextView) findViewById(R.id.tv_team_a_games_won);
         teamB_score = (TextView) findViewById(R.id.team_b_score);
         teamB_all_score = (TextView) findViewById(R.id.tv_team_b_games_won);
+
+        tv_first_a = (TextView) findViewById(R.id.tv_first_player_a);
+        tv_second_a = (TextView) findViewById(R.id.tv_second_player_a);
+        tv_third_a = (TextView) findViewById(R.id.tv_third_player_a);
+
+        tv_first_b = (TextView) findViewById(R.id.tv_first_player_b);
+        tv_second_b = (TextView) findViewById(R.id.tv_second_player_b);
+        tv_third_b = (TextView) findViewById(R.id.tv_third_player_b);
+
+
+
+        if(!getIntent().getStringExtra("first_a").isEmpty() &&
+                !getIntent().getStringExtra("second_a").isEmpty() &&
+                !getIntent().getStringExtra("first_b").isEmpty() &&
+                !getIntent().getStringExtra("second_b").isEmpty()){
+
+            player_1_team_a = getIntent().getStringExtra("first_a");
+            player_2_team_a = getIntent().getStringExtra("second_a");
+            player_1_team_b = getIntent().getStringExtra("first_b");
+            player_2_team_b = getIntent().getStringExtra("second_b");
+
+            tv_first_a.setText(player_1_team_a);
+            tv_second_a.setText(player_2_team_a);
+            tv_first_b.setText(player_1_team_b);
+            tv_second_b.setText(player_2_team_b);
+
+            if(getIntent().getStringExtra("type").equals("six_players")){
+                if(!getIntent().getStringExtra("third_a").isEmpty() && !getIntent().getStringExtra("first_b").isEmpty()){
+                    player_3_team_a = getIntent().getStringExtra("third_a");
+                    player_3_team_b = getIntent().getStringExtra("third_b");
+
+                    tv_third_a.setText(player_3_team_a);
+                    tv_third_b.setText(player_3_team_b);
+                }else{
+                    tv_third_a.setVisibility(View.GONE);
+                    tv_third_b.setVisibility(View.GONE);
+                }
+            }
+
+
+        }else{
+
+            tv_first_a.setVisibility(View.GONE);
+            tv_second_a.setVisibility(View.GONE);
+            tv_third_a.setVisibility(View.GONE);
+
+            tv_first_b.setVisibility(View.GONE);
+            tv_second_b.setVisibility(View.GONE);
+            tv_third_b.setVisibility(View.GONE);
+        }
     }
 
     public void addTeamAPoints(View view) {
